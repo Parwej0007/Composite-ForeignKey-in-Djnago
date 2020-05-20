@@ -10,15 +10,16 @@ pip install django-composite-foreignkey
 
 Parent table ->
 
-class OrgSubdom(models.Model):
-    org_code = models.ForeignKey(Org, on_delete=models.CASCADE, db_column='org_code', related_name='orgsubdoms')
-    org_dom = models.CharField(max_length=45)
-    org_subdom = models.CharField(max_length=45)
-    created_by = models.CharField(max_length=45, blank=True, null=True)
-    created_datetime = models.DateTimeField(blank=True, null=True)
-    class Meta:
-        db_table = 'org_subdom'
-        unique_together = (('org_code', 'org_dom', 'org_subdom'),)
-    def __str__(self):
-        return 'Orgsubdom '+ str(self.org_subdom)
+    class OrgSubdom(models.Model):
+        org_code = models.ForeignKey(Org, on_delete=models.CASCADE, db_column='org_code', related_name='orgsubdoms')
+        org_dom = models.CharField(max_length=45)
+        org_subdom = models.CharField(max_length=45)
+        created_by = models.CharField(max_length=45, blank=True, null=True)
+        created_datetime = models.DateTimeField(blank=True, null=True)
+        
+        class Meta:
+            db_table = 'org_subdom'
+            unique_together = (('org_code', 'org_dom', 'org_subdom'),)
+        def __str__(self):
+            return 'Orgsubdom '+ str(self.org_subdom)
       
