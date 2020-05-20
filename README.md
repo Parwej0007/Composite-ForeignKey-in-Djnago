@@ -16,6 +16,7 @@ class OrgSubdom(models.Model):
     org_subdom = models.CharField(max_length=45)
     created_by = models.CharField(max_length=45, blank=True, null=True)
     created_datetime = models.DateTimeField(blank=True, null=True)
+    
     class Meta:
         db_table = 'org_subdom'
         unique_together = (('org_code', 'org_dom', 'org_subdom'),)
