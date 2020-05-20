@@ -1,0 +1,7 @@
+.idea
+venv
+insert_query.txt
+templates
+PkApp/__init__.py
+PkApp/tests.py
+__pycache__/
