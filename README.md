@@ -50,7 +50,7 @@ Child table(Foreign key table) ->
                           #we can map directly by set-> to_fields={"org_code", "org_dom", "org_subdom"}
                           
     -------------------------------------------------------------------------------
-I point issues, I able to enter data in ForignKey(child table) without mapping child columns to Parent table columns in django, technically this is wrong when I do same in MYSQL database then getting error  "Cannot add or update a child row: a foreign key constraint fails".
+<b> I pointed issues-->/b> I able to enter data in ForignKey(child table) without mapping child columns to Parent table columns in django, technically this is wrong when I do same in MYSQL database then getting error  "Cannot add or update a child row: a foreign key constraint fails".
 So, In Django we able to insert data without PK column data. 
     
    
